@@ -1,4 +1,3 @@
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord)](https://discord.gg/7MEe2QMpMS)
 # pcileech-cmedia-cmi8738
 
 **PCILeech FPGA firmware — C-Media CMI8738/PCI-SX sound card emulation**

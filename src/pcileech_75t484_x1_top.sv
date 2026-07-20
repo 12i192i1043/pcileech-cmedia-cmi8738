@@ -25,7 +25,6 @@ module pcileech_75t484_x1_top #(
     output          user_ld2_n,
     input           user_sw1_n,
     input           user_sw2_n,
-    output          ft2232_rst_n,
     
     // PCI-E FABRIC
     output  [0:0]   pcie_tx_p,
@@ -87,9 +86,8 @@ module pcileech_75t484_x1_top #(
     assign ft601_rst_n = ~rst;
     wire led_pwronblink = ~user_sw1_n ^ (tickcount64[24] & (tickcount64[63:27] == 0));
     
-    OBUF led_ld1_obuf(.O(user_ld1_n), .I(led_pcie));
-    OBUF led_ld2_obuf(.O(user_ld2_n), .I(led_com));
-    OBUF ft2232_rst_obuf(.O(ft2232_rst_n), .I(user_sw2_n));
+    OBUF led_ld1_obuf(.O(user_ld1_n), .I(~led_pcie));
+    OBUF led_ld2_obuf(.O(user_ld2_n), .I(~led_com));
     
     // ----------------------------------------------------
     // BUFFERED COMMUNICATION DEVICE (FT601)

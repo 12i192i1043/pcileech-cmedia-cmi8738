@@ -57,8 +57,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {user_ld1_n user_ld2_n user_sw1_n us
 
 #set_property PACKAGE_PIN F21 [get_ports ft2232_rst_n]
 #set_property IOSTANDARD LVCMOS33 [get_ports ft2232_rst_n]
-set_property PACKAGE_PIN F21 [get_ports ft2232_rst_n]
-set_property IOSTANDARD LVCMOS33 [get_ports ft2232_rst_n]
 # SYSCLK
 set_property PACKAGE_PIN H4 [get_ports clk]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
